@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "37682414888",
+    "project_id": "drbot-c728f",
+    "storage_bucket": "drbot-c728f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37682414888:android:feec9b09f428fa94a4fc1d",
+        "android_client_info": {
+          "package_name": "com.example.drbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37682414888-0ak7g8vkpd6ks3t7c75evvtmvsmcfcls.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.drbot",
+            "certificate_hash": "afa39254669337f4130d394123924f17bd5547c3"
+          }
+        },
+        {
+          "client_id": "37682414888-rb42m4e8fuklklir4gqih7saev1s12u1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.drbot",
+            "certificate_hash": "6fd0a271b5368110180474a93ecab82535b487a2"
+          }
+        },
+        {
+          "client_id": "37682414888-lsnj60scnjn0nbi6h0iqed3fh7m3vasd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9hkAZialOWq-GoMheMwrgg3lJ4fweFz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37682414888-lsnj60scnjn0nbi6h0iqed3fh7m3vasd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
