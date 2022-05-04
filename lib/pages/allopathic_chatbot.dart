@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
-class InAppChat extends StatefulWidget {
-  const InAppChat({ Key? key }) : super(key: key);
+class AllopathicChatbot extends StatefulWidget {
+  const AllopathicChatbot({ Key? key }) : super(key: key);
 
   @override
-  _InAppChatState createState() => _InAppChatState();
+  _AllopathicChatbotState createState() => _AllopathicChatbotState();
 }
 
-class _InAppChatState extends State<InAppChat> {
+class _AllopathicChatbotState extends State<AllopathicChatbot> {
 
   double _progress = 0;
   late InAppWebViewController webView;

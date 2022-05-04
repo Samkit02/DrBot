@@ -213,7 +213,7 @@ class _LocationPageState extends State<LocationPage> {
         ));
       }
 
-      if (f.types?.first != null) {
+      if (f.types.first != null) {
         list.add(Padding(
           padding: EdgeInsets.only(bottom: 2.0),
           child: Text(

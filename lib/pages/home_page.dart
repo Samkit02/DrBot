@@ -1,10 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:drbot/dr_bot_icons_icons.dart';
-import 'package:drbot/pages/in_app_chat.dart';
+import 'package:drbot/pages/allopathic_chatbot.dart';
+import 'package:drbot/pages/ayurvedic_chatbot.dart';
 import 'package:drbot/pages/location_page.dart';
 import 'package:drbot/pages/profile_page.dart';
 import 'package:drbot/pages/sign_up_page.dart';
+import 'package:drbot/pages/upload_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -121,8 +123,8 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.only(top: 30.0, left: 20.0, right: 20.0),
         children: [
           InkWell(
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => InAppChat() ));
+            onTap: () async {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => AyurvedicChatbot() ));
             },
             child: Container(
               decoration: const BoxDecoration(
@@ -134,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   const Text(
-                    'Chatbot',
+                    'Ayurvedic Chatbot',
                     style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 16,
@@ -144,37 +146,42 @@ class _HomePageState extends State<HomePage> {
                     textAlign: TextAlign.left,
                   ),
                   Image.asset(
-                    'assets/pic1.png',
+                    'assets/pic2.png',
                     fit: BoxFit.fill,
                   ),
                 ],
               ),
             ),
           ),
-          Container(
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10))
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                const Text(
-                  'Records',
-                  style: TextStyle(
-                    fontFamily: 'Lato',
-                    fontSize: 16,
-                    color: Color(0xff181461),
-                    fontWeight: FontWeight.w700,
+          InkWell(
+            onTap: () async {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => UploadImage() ));
+            },
+            child: Container(
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10))
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Text(
+                    'Haemoglobin Detection',
+                    style: TextStyle(
+                      fontFamily: 'Lato',
+                      fontSize: 16,
+                      color: Color(0xff181461),
+                      fontWeight: FontWeight.w700,
+                    ),
+                    textAlign: TextAlign.left,
                   ),
-                  textAlign: TextAlign.left,
-                ),
-                Image.asset(
-                  'assets/pic2.png',
-                  fit: BoxFit.fill,
-                ),
-              ],
+                  Image.asset(
+                    'assets/pic2.png',
+                    fit: BoxFit.fill,
+                  ),
+                ],
+              ),
             ),
           ),
           InkWell(
@@ -295,108 +302,32 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, top: 20.0),
-              child: InkWell(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: const [
-                    Icon(
-                      DrBotIcons.group_25,
-                      color: Color(0xff181461),
-                      size: 18,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.0, ),
-                      child: Text(
-                        'My Appointments',
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UploadImage())
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20.0, top: 20.0),
+                child: InkWell(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: const [
+                      Icon(
+                        DrBotIcons.group_25,
+                        color: Color(0xff181461),
+                        size: 18,
                       ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, top: 20.0),
-              child: InkWell(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: const [
-                    Icon(
-                      Icons.add_circle_outline,
-                      color: Color(0xff181461),
-                      size: 18,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.0, ),
-                      child: Text(
-                        'New Appointment',
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, top: 20.0),
-              child: InkWell(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: const [
-                    Icon(
-                      DrBotIcons.group_117,
-                      color: Color(0xff181461),
-                      size: 18,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.0, ),
-                      child: Text(
-                        'Medical Records',
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, top: 20.0),
-              child: InkWell(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: const [
-                    Icon(
-                      DrBotIcons.message,
-                      color: Color(0xff181461),
-                      size: 18,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.0, ),
-                      child: Text(
-                        'Chatbot',
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, top: 20.0),
-              child: InkWell(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: const [
-                    Icon(
-                      DrBotIcons.group_127,
-                      color: Color(0xff181461),
-                      size: 18,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.0, ),
-                      child: Text(
-                        'Statistics',
-                      ),
-                    )
-                  ],
+                      Padding(
+                        padding: EdgeInsets.only(left: 10.0, ),
+                        child: Text(
+                          'Haemoglobin Detection',
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -432,25 +363,6 @@ class _HomePageState extends State<HomePage> {
                     )
                   ],
                 ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, top: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
-                  Icon(
-                    Icons.help_outline,
-                    color: Color(0xff181461),
-                    size: 18,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 10.0, ),
-                    child: Text(
-                      'My Appointments',
-                    ),
-                  )
-                ],
               ),
             ),
             const Spacer(),

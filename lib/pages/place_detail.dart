@@ -176,7 +176,7 @@ class PlaceDetailState extends State<PlaceDetailWidget> {
       );
     }
 
-    if (placeDetail.types?.first != null) {
+    if (placeDetail.types.first != null) {
       list.add(
         Padding(
             padding:
