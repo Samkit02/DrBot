@@ -22,7 +22,7 @@ class _AllopathicChatbotState extends State<AllopathicChatbot> {
         children: [
           InAppWebView(
             initialUrlRequest: URLRequest(
-              url: Uri.parse("https://web.leena.ai/?clientId=PAOW5rS5b8O0kJxIBBKBV")
+              url: Uri.parse("url")
             ),
             onWebViewCreated: (InAppWebViewController controller) {
               webView = controller;
