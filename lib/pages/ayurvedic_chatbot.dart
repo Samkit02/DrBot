@@ -16,7 +16,7 @@ class _AyurvedicChatbotState extends State<AyurvedicChatbot> {
   final GlobalKey<AnimatedListState> _listKey = GlobalKey();
   final List<String> _data = [];
 
-  static const String BOT_URL = 'https://drbot-chatbot.herokuapp.com/';
+  static const String BOT_URL = 'url';
   TextEditingController queryController = TextEditingController();
 
   @override
