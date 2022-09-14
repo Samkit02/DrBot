@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Dr Bot</string>
-    <string name="facebook_app_id">278247977507291</string>
-    <string name="fb_login_protocol_scheme">fb278247977507291</string>
-    <string name="facebook_client_token">bdcd8358f1518be408badbc0def635bc</string>
 </resources>
