@@ -1,9 +1,9 @@
 <?php 
 // DB credentials.
-/*define('DB_HOST','localhost');
-$username='admin_sis';
-$password='Webp!0neer1980';
-define('DB_NAME','heroku_test');
+/*define('','');
+$username='';
+$password='';
+define('','');
 // Establish database connection.
 try
 {
@@ -16,10 +16,10 @@ catch (PDOException $e)
 date_default_timezone_set("Asia/Kolkata");
 error_reporting(0);
 
-$servername = "localhost";
-$username = "root";
+$servername = "";
+$username = "";
 $password = "";
-$dbname = "tms";
+$dbname = "";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
