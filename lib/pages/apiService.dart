@@ -10,8 +10,7 @@ class APIService {
   static var client = http.Client();
   Future<List<ResultModel>?> getDiseaseList() async {
     List<ResultModel>? model = <ResultModel>[];
-    String url = 'http://10.0.2.2:80/Hemoglobin1/selectUtil.php';
-    //String url = 'https://entwinetechnology.com/selectUtil.php';
+    String url = 'url/Hemoglobin1/selectUtil.php';
     print(url);
     try {
       var response = await client.get(Uri.parse(url));
